@@ -1,3 +1,4 @@
+import { createContext} from "react";
 import { Route, Routes } from "react-router-dom";
 import Calendar from "./Components/Calender/Calendar";
 import Completed from "./Components/Completed/Completed";
@@ -5,10 +6,14 @@ import Footer from "./Components/Footer/Footer";
 import Menu from "./Components/Header/Menu";
 import Home from "./Components/Home";
 import Todo from "./Components/Todo/Todo";
+import useTodo from "./Hooks/useTodo";
+
+export const todoContext = createContext()
 
 function App() {
+  const{todos, setTodos, isLoad, setIsLoad}=useTodo()
   return (
-    <>
+    <todoContext.Provider value={{todos, setTodos, isLoad, setIsLoad}}>
      <Menu></Menu>
      <Routes>
         <Route path="/" element={<Home/>}/>
@@ -17,7 +22,7 @@ function App() {
         <Route path="/calendar" element={<Calendar/>}/>
      </Routes>
      <Footer></Footer>
-    </>
+    </todoContext.Provider>
   );
 }
 

@@ -1,4 +1,5 @@
 import React from 'react';
+import AllTodo from '../AllTodo/AllTodo';
 
 const Todo = () => {
 	return (
@@ -9,30 +10,7 @@ const Todo = () => {
 					</div> */}
 
 					<ul className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-1'>
-						<li className='flex justify-between items-center border px-2 py-1 rounded-md'>
-							<input type="radio" name="radio-1" className="radio text-xl p-4"/>
-							<h2 className='px-2 py-1 text-lg'>Added todo list from thek kshn lks</h2>
-							<button className="btn btn-circle btn-outline">
-								<i className="far fa-edit text-lg"></i>
-							</button>
-						</li>
-
-						<li className='flex justify-between items-center border px-2 py-1 rounded-md'>
-							<input type="radio" name="radio-1" className="radio text-xl p-4"/>
-							<h2 className='px-2 py-1 text-lg'>Added todo list from thek</h2>
-							<button className="btn btn-circle btn-outline">
-								<i className="far fa-edit text-lg"></i>
-							</button>
-						</li>
-
-						<li className='flex justify-between items-center border px-2 py-1 rounded-md'>
-							<input type="radio" name="radio-1" className="radio text-xl p-4"/>
-							<h2 className='px-2 py-1 text-lg'>Added todo list from thek kshn lks</h2>
-							<button className="btn btn-circle btn-outline">
-								<i className="far fa-edit text-lg"></i>
-							</button>
-						</li>
-
+						<AllTodo></AllTodo>
 					</ul>
 			</div>
 		</main>
