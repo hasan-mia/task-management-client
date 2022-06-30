@@ -5,7 +5,15 @@
 main{
 	min-height: 70vh;
 }
-
+.react-datepicker-wrapper {
+    border: 2px solid rgb(92, 86, 86);
+    text-align: center;
+    font-size: 24px;
+}
+.react-datepicker__input-container {
+    border: 1px solid #e8dfdf;
+    padding: 5px;
+}
 @media(min-width: 768px){
 	.left-siebar::after {
 	position: absolute;
