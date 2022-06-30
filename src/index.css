@@ -5,3 +5,14 @@
 main{
 	min-height: 70vh;
 }
+
+@media(min-width: 768px){
+	.left-siebar::after {
+	position: absolute;
+	content: "";
+    border-right: 2px solid gray;
+    height: 60vh;
+    top: 18vh;
+    left: 26vw;
+}
+}

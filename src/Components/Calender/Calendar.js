@@ -2,7 +2,7 @@ import React from 'react';
 
 const Calendar = () => {
 	return (
-		<main>
+		<main className='w-full px-14 py-8'>
 			Calendar 
 		</main>
 	);
