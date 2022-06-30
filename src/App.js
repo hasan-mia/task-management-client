@@ -6,14 +6,16 @@ import Footer from "./Components/Footer/Footer";
 import Menu from "./Components/Header/Menu";
 import Home from "./Components/Home";
 import Todo from "./Components/Todo/Todo";
+import useComplete from "./Hooks/useComplete";
 import useTodo from "./Hooks/useTodo";
 
 export const todoContext = createContext()
 
 function App() {
-  const{todos, setTodos, isLoad, setIsLoad}=useTodo()
+  const{todos, setTodos, isLoad, setIsLoad}=useTodo();
+  const{completes, setCompletes}=useComplete()
   return (
-    <todoContext.Provider value={{todos, setTodos, isLoad, setIsLoad}}>
+    <todoContext.Provider value={{todos, setTodos, completes, setCompletes, isLoad, setIsLoad}}>
      <Menu></Menu>
      <Routes>
         <Route path="/" element={<Home/>}/>
