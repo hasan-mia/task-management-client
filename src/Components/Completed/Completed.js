@@ -23,7 +23,7 @@ const Completed = () => {
 	// 	return <p className='text-center text-lg text-green-700 font-semibold uppercase'>Loading</p>
 	// }
 	return (
-		<main className='w-full px-14 py-8'>
+		<main className='w-full px-1 lg:px-14 py-8'>
 			<ul className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-1'>
 				{
 					completes.map(item=>

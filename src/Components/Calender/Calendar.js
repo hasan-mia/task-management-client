@@ -22,9 +22,9 @@ const Calendar = () => {
 			"December",
 		];
 	return (
-		<main className='w-full px-14 py-8'>
+		<main className='w-full px-1 lg:px-14 py-8'>
 			<DatePicker renderCustomHeader={({date, changeYear, changeMonth, decreaseMonth, increaseMonth, prevMonthButtonDisabled, nextMonthButtonDisabled, }) => (
-			<div className='flex flex-wrap justify-center items-center m-4 text-lg'>
+			<div className='flex flex-wrap justify-center items-center p-4 text-lg'>
 				<button onClick={decreaseMonth} disabled={prevMonthButtonDisabled}>
 					{"<"}
 				</button>

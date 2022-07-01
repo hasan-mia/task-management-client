@@ -4,7 +4,7 @@ import AllTodo from '../AllTodo/AllTodo';
 const Todo = () => {
 	return (
 		<main>
-			<div className='w-full px-14 py-8'>
+			<div className='w-full px-1 lg:px-14 py-8'>
 					{/* <div className="text-xl mb-3 font-semibold">
 						<h2 className='uppercase mt-6 lg:mt-0 pb-2 text-center lg:text-left'>YOUR TASK LIST</h2>
 					</div> */}
