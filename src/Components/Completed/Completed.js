@@ -5,7 +5,7 @@ const Completed = () => {
 	const {completes, setCompletes, isLoad, setIsLoad} = useContext(todoContext);
 
 	const handleDelete = id =>{
-		const url = `http://localhost:5000/complete/${id}`;
+		const url = `https://todotask-management.herokuapp.com/complete/${id}`;
 		fetch(url, {
 			method: 'DELETE',
 			headers: {'content-type': 'application/json'}

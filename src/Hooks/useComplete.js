@@ -4,7 +4,7 @@ const useComplete = () => {
 	const [completes, setCompletes] = useState([])
     const [isLoad, setIsLoad] = useState(true)
 	useEffect(() => {
-		fetch('http://localhost:5000/completes')
+		fetch('https://todotask-management.herokuapp.com/completes')
 		.then((res) => res.json())
         .then((data) => setCompletes(
         data, setIsLoad(false)));

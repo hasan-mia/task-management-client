@@ -9,7 +9,7 @@ const AddTodo = () => {
 		e.preventDefault();
 		const todo = todoItem;
 	
-		const url = 'http://localhost:5000/todo';
+		const url = 'https://todotask-management.herokuapp.com/todo';
 		fetch(url, {
 			method: 'POST',
 			headers: {'Content-type': 'application/json; charset=UTF-8'},

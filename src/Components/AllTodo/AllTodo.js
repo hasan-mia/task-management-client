@@ -14,7 +14,7 @@ const AllTodo = () => {
 		const complete = {...completeItem};
 		console.log({...complete});
 	
-		const url = 'http://localhost:5000/complete';
+		const url = 'https://todotask-management.herokuapp.com/complete';
 		fetch(url, {
 			method: 'POST',
 			headers: {'Content-type': 'application/json; charset=UTF-8'},
@@ -26,7 +26,7 @@ const AllTodo = () => {
 
 // =========Remove Task after added========
 	const handleRemove = id =>{
-		const url = `http://localhost:5000/todo/${id}`;
+		const url = `https://todotask-management.herokuapp.com/todo/${id}`;
 		fetch(url, {
 			method: 'DELETE',
 			headers: {'content-type': 'application/json'}

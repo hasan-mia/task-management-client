@@ -13,7 +13,7 @@ const UpdateTodo = ({updateId, setUpdateId}) => {
 		e.preventDefault();
 		const todo = todoItem;
 
-		const url = `http://localhost:5000/todo/${_id}`;
+		const url = `https://todotask-management.herokuapp.com/todo/${_id}`;
 		fetch(url, {
 			method: 'PATCH',
 			headers: {'Content-type': 'application/json; charset=UTF-8'},

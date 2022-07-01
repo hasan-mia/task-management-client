@@ -4,7 +4,7 @@ const useTodo = () => {
 	const [todos, setTodos] = useState([])
     const [isLoad, setIsLoad] = useState(true)
 	useEffect(() => {
-		fetch('http://localhost:5000/todos')
+		fetch('https://todotask-management.herokuapp.com/todos')
 		.then((res) => res.json())
         .then((data) => setTodos(
         data, setIsLoad(false)));
