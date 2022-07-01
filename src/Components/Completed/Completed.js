@@ -2,24 +2,26 @@ import React, { useContext } from 'react';
 import { todoContext } from '../../App';
 
 const Completed = () => {
-	const {completes, setCompletes} = useContext(todoContext);
+	const {completes, setCompletes, isLoad, setIsLoad} = useContext(todoContext);
 
-	const handleDelete = (id)=>{
-		console.log(typeof id);
+	const handleDelete = id =>{
 		const url = `http://localhost:5000/complete/${id}`;
 		fetch(url, {
 			method: 'DELETE',
-			headers: {'content-type': 'application/json'},
+			headers: {'content-type': 'application/json'}
 		})
 		.then(res => res.json())
 		.then(data =>{
 			if(data.deletedCount > 0){
-                    const remaining = completes.filter(complete => complete._id !== id);
-                    setCompletes(remaining);
-					// setCompletes(true);
-                }
+				const remaining = completes.filter(complete => complete._id !== id);
+                setCompletes(remaining);
+				setIsLoad(true);
+			}
 		})
 	}
+	// if (isLoad) {
+	// 	return <p className='text-center text-lg text-green-700 font-semibold uppercase'>Loading</p>
+	// }
 	return (
 		<main className='w-full px-14 py-8'>
 			<ul className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-1'>

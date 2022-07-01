@@ -8,7 +8,7 @@ const useComplete = () => {
 		.then((res) => res.json())
         .then((data) => setCompletes(
         data, setIsLoad(false)));
-    }, [isLoad])
+    }, [completes])
 
     return {completes, setCompletes, isLoad, setIsLoad}
 };

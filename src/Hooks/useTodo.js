@@ -8,7 +8,7 @@ const useTodo = () => {
 		.then((res) => res.json())
         .then((data) => setTodos(
         data, setIsLoad(false)));
-    }, [isLoad])
+    }, [todos])
 
     return {todos, setTodos, isLoad, setIsLoad}
 };
