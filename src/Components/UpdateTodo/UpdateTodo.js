@@ -27,10 +27,10 @@ const UpdateTodo = ({updateId, setUpdateId}) => {
 		<input type="checkbox" id="update-modal" class="modal-toggle" />
 		<div class="modal">
 			<div class="modal-box relative">
-				<label for="update-modal" class="btn btn-sm btn-circle absolute right-2 top-2 text-sm">✕</label>
+				<label for="update-modal" class="btn btn-sm btn-circle bg-primary hover:bg-primary absolute right-2 top-2 text-sm">✕</label>
 				<form className="flex p-4" onSubmit={handleUpdate}>
-					<input defaultValue={todo} onChange={event => setTodoItem(event.target.value)} type="text" placeholder="Type here" className="input input-bordered rounded-none w-full" required/>
-					<button type='submit' className="btn btn-square btn-outline rounded-none">
+					<input defaultValue={todo} onChange={event => setTodoItem(event.target.value)} type="text" placeholder="Type here" className="input input-bordered input-primary rounded-none w-full" required/>
+					<button type='submit' className="btn btn-primary input-bordered input-primary rounded-none">
 						Add
 					</button>
 				</form>

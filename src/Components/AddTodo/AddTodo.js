@@ -20,8 +20,8 @@ const AddTodo = () => {
 	};
 	return (
 		<form className="flex" onSubmit={handleSubmit}>
-			<input value={todoItem} onChange={event => setTodoItem(event.target.value)} type="text" placeholder="Type here" className="input input-bordered rounded-none w-full" required/>
-			<button type='submit' className="btn btn-square btn-outline rounded-none">
+			<input value={todoItem} onChange={event => setTodoItem(event.target.value)} type="text" placeholder="Type here" className="input input-bordered input-primary rounded-none w-full" required/>
+			<button type='submit' className="btn btn-primary input-bordered input-primary rounded-none">
 				Add
 			</button>
 		</form>

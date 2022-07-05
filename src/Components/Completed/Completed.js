@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import { todoContext } from '../../App';
 
 const Completed = () => {
-	const {completes, setCompletes, isLoad, setIsLoad} = useContext(todoContext);
+	const {completes, setCompletes, setIsLoad} = useContext(todoContext);
 
 	const handleDelete = id =>{
 		const url = `https://todotask-management.herokuapp.com/complete/${id}`;
@@ -23,18 +23,16 @@ const Completed = () => {
 	// 	return <p className='text-center text-lg text-green-700 font-semibold uppercase'>Loading</p>
 	// }
 	return (
-		<main className='w-full px-1 lg:px-14 py-8'>
+		<main className='px-4 lg:px-14 py-8 w-full'>
 			<ul className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-1'>
 				{
 					completes.map(item=>
-						<li key={item._id} className='flex justify-between items-center border px-2 py-1 rounded-md'>
-							<button className="btn btn-circle btn-outline border-yellow-500">
-								<i className="fal fa-times fa-2x text-yellow-500"></i>
-							</button>
+						<li key={item._id} className='flex justify-between items-center border border-primary px-2 py-1 rounded-md'>
+							<input type="checkbox" checked="checked" className="checkbox checkbox-primary"/>
 
 							<h2 className='px-2 py-1 text-lg'>{item.todo}</h2>
-							<button onClick={()=>handleDelete(item._id)} className="btn btn-circle btn-outline border-red-600">
-								<i className="far fa-trash-alt text-lg text-red-600"></i>
+							<button onClick={()=>handleDelete(item._id)} className="cursor-pointer">
+								<i className="far fa-trash-alt text-xl text-red-500"></i>
 							</button>
 						</li>
 					)

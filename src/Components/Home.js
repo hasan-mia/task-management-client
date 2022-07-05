@@ -5,7 +5,7 @@ import AllTodo from './AllTodo/AllTodo';
 const Home = () => {
 	
 	return (
-		<main className='w-full p-8'>
+		<main className='px-4 lg:px-8 py-8 w-full'>
 			<div className='flex flex-wrap flex-row justify-center'>
 
 				<div className='flex-shrink w-full px-0 my-2 w-12/12 sm:w-12/12 md:w-6/12 lg:w-3/12 xl:px-6 border lg:border-0 left-siebar'>
